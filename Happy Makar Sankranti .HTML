@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Makar Sankranti</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600|Muli:400,600,700&display=swap');
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            background: #87cefa;
+            font-family: 'Montserrat', sans-serif;
+        }
+        #background-wrap {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            padding-top: 50px;
+            z-index: -2;
+        }
+        .cloud {
+            background: #fff;
+            background: linear-gradient(top, #fff 5%, #f1f1f1 100%);
+            border-radius: 100px;
+            box-shadow: 0 8px 5px rgba(0, 0, 0, 0.1);
+            height: 120px;
+            width: 350px;
+            position: relative;
+        }
+        .cloud:after, .cloud:before {
+            content: '';
+            position: absolute;
+            background: #fff;
+            z-index: -1;
+        }
+        .cloud:after {
+            border-radius: 100px;
+            height: 100px;
+            width: 100px;
+            top: -50px;
+            left: 50px;
+        }
+        .cloud:before {
+            border-radius: 200px;
+            height: 180px;
+            width: 180px;
+            top: -90px;
+            right: 50px;
+        }
+        @keyframes animateCloud {
+            0% {
+                margin-left: -1000px;
+            }
+            100% {
+                margin-left: 100%;
+            }
+        }
+        .x1, .x2, .x3, .x4, .x5 {
+            animation: animateCloud linear infinite;
+        }
+        .x1 { animation-duration: 35s; transform: scale(0.65); }
+        .x2 { animation-duration: 20s; transform: scale(0.3); }
+        .x3 { animation-duration: 30s; transform: scale(0.5); }
+        .x4 { animation-duration: 30s; transform: scale(0.4); }
+        .x5 { animation-duration: 30s; transform: scale(0.55); }
+        .kite, .kite1 {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            transform: rotate(45deg);
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            margin: auto;
+            animation-timing-function: ease-in-out;
+            animation-iteration-count: infinite;
+        }
+        .kite { background: #ff0; animation: flying 10s; }
+        .kite1 { background: #FF5722; animation: flying1 10s; }
+        .kite:before, .kite1:before, .kite:after, .kite1:after {
+            content: '';
+            position: absolute;
+        }
+        .kite:before, .kite1:before {
+            top: 50%; 
+            left: -20%;
+            width: 141%;
+            border-top: 1px solid;
+            transform: rotate(45deg);
+        }
+        .kite:after, .kite1:after {
+            top: 0;
+            left: 0;
+            width: 100px;
+            height: 100px;
+            border-top-left-radius: 100%;
+            border-left: 1px solid;
+            border-top: 1px solid;
+        }
+        .kite:before { border-color: #000; }
+        .kite1:before { border-color: #fff; }
+        .kite:after { border-color: #000; }
+        .kite1:after { border-color: #fff; }
+        .tail {
+            position: relative;
+            top: 95px; 
+            left: 85px;
+            width: 0; 
+            height: 0; 
+            border-left: 20px solid transparent;
+            border-right: 20px solid transparent;
+            border-bottom: 20px solid black;
+            transform: rotate(-45deg);
+        }
+        @keyframes flying {
+            0%, 100% { top: 0%; left: 0%; }
+            25% { top: -20%; left: 5%; }
+            50% { top: -15%; left: 20%; }
+            75% { top: -10%; left: 5%; }
+        }
+        @keyframes flying1 {
+            0%, 100% { top: -30%; left: -30%; }
+            25% { top: -20%; left: 5%; }
+            50% { top: -25%; left: 20%; }
+            75% { top: -10%; left: 15%; }
+        }
+        .wish {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            z-index: -1;
+            background: transparent;
+            width: 100%;
+        }
+        .heading {
+            color: #fff;
+            text-align: center;
+            letter-spacing: 5px;
+            text-shadow: 1px 1px 0px #87cefa, 2px 2px 0px #2196f3, 3px 3px 0px #87cefa;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 80px;
+        }
+    </style>
+</head>
+<body>
+    <div id="background-wrap">
+        <div class="x1"><div class="cloud"></div></div>
+        <div class="x2"><div class="cloud"></div></div>
+        <div class="x3"><div class="cloud"></div></div>
+        <div class="x4"><div class="cloud"></div></div>
+        <div class="x5"><div class="cloud"></div></div>
+    </div>
+    <div class="kite"><div class="tail"></div></div>
+    <div class="kite1"><div class="tail"></div></div>
+    <div class="wish">
+        <h4 class="heading">Happy Makar Sankranti</h4>
+    </div>
+  
+</body>
+<footer>
+    Created  ❤️ by Vikas Rathore
+  </footer>
+</html>
